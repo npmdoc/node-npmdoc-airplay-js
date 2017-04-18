@@ -1,0 +1,5452 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>airplay-js (v0.3.0)</a>
+</h1>
+<h4>JS Native Apple AirPlay client library for AppleTV</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js">module airplay-js</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevice">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDevice
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDeviceById
+            <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevices">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDevices
+            <span class="apidocSignatureSpan">( skipCheck )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.init">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.init
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.isValid">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.isValid
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.start">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device
+            <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.authorize">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.authorize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.close">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.getInfo">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.getInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.isReady">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.isReady
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.match">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.match
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.onReady">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.onReady
+            <span class="apidocSignatureSpan">( callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.photo">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.photo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.play">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.play
+            <span class="apidocSignatureSpan">(media, position, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.rate">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.rate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.reverse">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.reverse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.scrub">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.scrub
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.simpleplay">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.simpleplay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.status">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.volume">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.volume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.command4FFMpeg
+            <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.command4FFProbe
+            <span class="apidocSignatureSpan">( filePath )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.getURI">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.getURI
+            <span class="apidocSignatureSpan">( type, index )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.httpHandler">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.httpHandler
+            <span class="apidocSignatureSpan">( request, response )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.open">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.open
+            <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.segment">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.segment
+            <span class="apidocSignatureSpan">( index, req, res )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.setSubtitles
+            <span class="apidocSignatureSpan">( subtitles )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.start">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.start
+            <span class="apidocSignatureSpan">( port )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.connect">
+            function <span class="apidocSignatureSpan">airplay-js.</span>connect
+            <span class="apidocSignatureSpan">( host, port, pass, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.createBrowser">
+            function <span class="apidocSignatureSpan">airplay-js.</span>createBrowser
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.createHLS">
+            function <span class="apidocSignatureSpan">airplay-js.</span>createHLS
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>browser</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>client</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>device</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">airplay-js.</span>hls</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser">module airplay-js.Browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.Browser">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Browser
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.super_">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype">module airplay-js.Browser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevice">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevice
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDeviceById
+            <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevices">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevices
+            <span class="apidocSignatureSpan">( skipCheck )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.init">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>init
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.isValid">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>isValid
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.start">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.getDevice">module airplay-js.Browser.prototype.getDevice</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevice.getDevice">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevice
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.getDeviceById">module airplay-js.Browser.prototype.getDeviceById</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById.getDeviceById">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDeviceById
+            <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.getDevices">module airplay-js.Browser.prototype.getDevices</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.getDevices.getDevices">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevices
+            <span class="apidocSignatureSpan">( skipCheck )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.init">module airplay-js.Browser.prototype.init</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.init.init">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>init
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.isValid">module airplay-js.Browser.prototype.isValid</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.isValid.isValid">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>isValid
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.start">module airplay-js.Browser.prototype.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.start.start">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>start
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Browser.prototype.stop">module airplay-js.Browser.prototype.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Browser.prototype.stop.stop">
+            function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device">module airplay-js.Device</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.Device">
+            function <span class="apidocSignatureSpan">airplay-js.</span>Device
+            <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.super_">
+            function <span class="apidocSignatureSpan">airplay-js.Device.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype">module airplay-js.Device.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.authorize">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>authorize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.close">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.getInfo">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>getInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.isReady">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>isReady
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.match">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>match
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.onReady">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>onReady
+            <span class="apidocSignatureSpan">( callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.photo">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>photo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.play">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>play
+            <span class="apidocSignatureSpan">(media, position, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.rate">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>rate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.reverse">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>reverse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.scrub">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>scrub
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.simpleplay">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>simpleplay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.status">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.volume">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>volume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.authorize">module airplay-js.Device.prototype.authorize</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.authorize.authorize">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>authorize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.close">module airplay-js.Device.prototype.close</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.close.close">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>close
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.getInfo">module airplay-js.Device.prototype.getInfo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.getInfo.getInfo">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>getInfo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.isReady">module airplay-js.Device.prototype.isReady</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.isReady.isReady">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>isReady
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.match">module airplay-js.Device.prototype.match</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.match.match">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>match
+            <span class="apidocSignatureSpan">( info )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.onReady">module airplay-js.Device.prototype.onReady</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.onReady.onReady">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>onReady
+            <span class="apidocSignatureSpan">( callback )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.photo">module airplay-js.Device.prototype.photo</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.photo.photo">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>photo
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.play">module airplay-js.Device.prototype.play</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.play.play">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>play
+            <span class="apidocSignatureSpan">(media, position, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.rate">module airplay-js.Device.prototype.rate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.rate.rate">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>rate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.reverse">module airplay-js.Device.prototype.reverse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.reverse.reverse">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>reverse
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.scrub">module airplay-js.Device.prototype.scrub</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.scrub.scrub">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>scrub
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.simpleplay">module airplay-js.Device.prototype.simpleplay</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.simpleplay.simpleplay">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>simpleplay
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.status">module airplay-js.Device.prototype.status</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.status.status">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.stop">module airplay-js.Device.prototype.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.stop.stop">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.Device.prototype.volume">module airplay-js.Device.prototype.volume</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.Device.prototype.volume.volume">
+            function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>volume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS">module airplay-js.HLS</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.HLS">
+            function <span class="apidocSignatureSpan">airplay-js.</span>HLS
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.super_">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype">module airplay-js.HLS.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFMpeg
+            <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFProbe
+            <span class="apidocSignatureSpan">( filePath )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.getURI">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>getURI
+            <span class="apidocSignatureSpan">( type, index )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.httpHandler">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>httpHandler
+            <span class="apidocSignatureSpan">( request, response )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.open">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>open
+            <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.segment">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>segment
+            <span class="apidocSignatureSpan">( index, req, res )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>setSubtitles
+            <span class="apidocSignatureSpan">( subtitles )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.start">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>start
+            <span class="apidocSignatureSpan">( port )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.stop">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.command4FFMpeg">module airplay-js.HLS.prototype.command4FFMpeg</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg.command4FFMpeg">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFMpeg
+            <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.command4FFProbe">module airplay-js.HLS.prototype.command4FFProbe</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe.command4FFProbe">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFProbe
+            <span class="apidocSignatureSpan">( filePath )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.getURI">module airplay-js.HLS.prototype.getURI</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.getURI.getURI">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>getURI
+            <span class="apidocSignatureSpan">( type, index )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.httpHandler">module airplay-js.HLS.prototype.httpHandler</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.httpHandler.httpHandler">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>httpHandler
+            <span class="apidocSignatureSpan">( request, response )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.open">module airplay-js.HLS.prototype.open</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.open.open">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>open
+            <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.segment">module airplay-js.HLS.prototype.segment</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.segment.segment">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>segment
+            <span class="apidocSignatureSpan">( index, req, res )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.setSubtitles">module airplay-js.HLS.prototype.setSubtitles</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles.setSubtitles">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>setSubtitles
+            <span class="apidocSignatureSpan">( subtitles )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.start">module airplay-js.HLS.prototype.start</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.start.start">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>start
+            <span class="apidocSignatureSpan">( port )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.HLS.prototype.stop">module airplay-js.HLS.prototype.stop</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.HLS.prototype.stop.stop">
+            function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>stop
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.browser">module airplay-js.browser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.browser.Browser">
+            function <span class="apidocSignatureSpan">airplay-js.browser.</span>Browser
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.client">module airplay-js.client</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.client.Client">
+            function <span class="apidocSignatureSpan">airplay-js.client.</span>Client
+            <span class="apidocSignatureSpan">( options, callback )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.connect">module airplay-js.connect</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.connect.connect">
+            function <span class="apidocSignatureSpan">airplay-js.</span>connect
+            <span class="apidocSignatureSpan">( host, port, pass, callback )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.createBrowser">module airplay-js.createBrowser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.createBrowser.createBrowser">
+            function <span class="apidocSignatureSpan">airplay-js.</span>createBrowser
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.createHLS">module airplay-js.createHLS</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.createHLS.createHLS">
+            function <span class="apidocSignatureSpan">airplay-js.</span>createHLS
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.device">module airplay-js.device</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.device.Device">
+            function <span class="apidocSignatureSpan">airplay-js.device.</span>Device
+            <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.airplay-js.hls">module airplay-js.hls</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.airplay-js.hls.HLS">
+            function <span class="apidocSignatureSpan">airplay-js.hls.</span>HLS
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js" id="apidoc.module.airplay-js">module airplay-js</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser" id="apidoc.element.airplay-js.Browser">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser = function ( options ) {
+    events.EventEmitter.call( this );
+    this.init( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+*/
+exports.createBrowser = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">Browser</span>( options );
+};
+
+/**
+* connect a airplay device
+*
+* @param {string} host airplay host
+* @param {number} port airplay port
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevice" id="apidoc.element.airplay-js.Browser.prototype.getDevice">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDevice
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.getDevice = function ( info ) {
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( device.match( info ) ) {
+            return device;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById" id="apidoc.element.airplay-js.Browser.prototype.getDeviceById">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDeviceById
+        <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.getDeviceById = function ( deviceId, skipCheck ) {
+    var device = this.devices[ deviceId ];
+    if ( device &amp;&amp; ( skipCheck || device.isReady() ) ) {
+        return device;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevices" id="apidoc.element.airplay-js.Browser.prototype.getDevices">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.getDevices
+        <span class="apidocSignatureSpan">( skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.getDevices = function ( skipCheck ) {
+    var devices = [];
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( skipCheck || device.isReady() ) {
+            devices.push( device );
+        }
+    }
+    return devices;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.init" id="apidoc.element.airplay-js.Browser.prototype.init">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.init
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.init = function ( options ) {
+    var self = this;
+    var nextDeviceId = 0;
+
+    this.devices = {};
+    this.addresses = []
+
+    var browser = mdns.createBrowser(mdns.tcp('airplay'));
+
+    browser.on('ready', function () {
+        browser.discover();
+    });
+
+    browser.on('serviceUp', function(data) {
+        if(data.port &amp;&amp; data.port == 7000 &amp;&amp; self.addresses.indexOf(data.address) &lt; 0){
+            var info = [data.address]
+            var name = data.name
+            self.addresses.push(data.address)
+
+            device = new Device( nextDeviceId++, info , name );
+            device.on( 'ready', function( d ) {
+                self.emit( 'deviceOn', d );
+            });
+            device.on( 'close', function( d ) {
+                delete self.devices[ d.id ];
+                self.emit( 'deviceOff', d );
+            });
+
+            self.devices[ device.id ] = device;
+        }
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.isValid( info ) ) {
+            return;
+        }
+
+        var device = self.getDevice( info );
+        if ( device ) {
+            device.close();
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.isValid" id="apidoc.element.airplay-js.Browser.prototype.isValid">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.isValid
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.isValid = function ( info ) {
+    if ( !info || !/^en\d+$/.test( info.networkInterface ) ) {
+        return !1;
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.start" id="apidoc.element.airplay-js.Browser.prototype.start">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.start = function () {
+    this.emit( 'start' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.stop" id="apidoc.element.airplay-js.Browser.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser.prototype.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser.prototype.stop = function () {
+    this.emit( 'stop' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device" id="apidoc.element.airplay-js.Device">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device
+        <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Device( id, info, name, callback ) {
+    var self = this;
+
+    events.EventEmitter.call( this );
+
+    this.id = id;
+    this.info = info;
+    this.name = name;
+    // this.serverInfo = null;
+    this.pingDelay = 5 * 1000; // å¿ƒè·³é—´éš”
+
+    this.client = new Client(
+        {
+            host: info[0], port: 7000
+            // ,user: 'zfkun', pass: ''
+        },
+        function () {
+            self.client.serverInfo(function( info ) {
+                self.serverInfo = info;
+                self.onReady( callback );
+            });
+        }
+    );
+    this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+    self.hls = require( '../airplay' ).createHLS();
+    self.hls.on( 'start', function () {
+        console.info( '[HLS] start: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'stop', function () {
+        console.info( '[HLS] stop: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'request', function ( req ) {
+        // var uri = url.parse( req.url, true );
+        console.info( '[HLS] request: %s', req.url );
+    });
+    self.hls.on( 'process', function ( d ) {
+        console.info( '[HLS] segment process: %s, %s, %s', d.index, d.file, d.out.toString() );
+    });
+    self.hls.on( 'segment', function ( d ) {
+        console.info( '[HLS] segment created: %s, %s, %s', d.index, d.file, d.out );
+    });
+    self.hls.on( 'open', function ( d ) {
+        console.info( '[HLS] opend: %s, %s', d.file, util.inspect( d.info ) );
+    });
+    self.hls.on( 'error', function ( err ) {
+        console.info( '[HLS] segment error: ', util.inspect( err ) );
+    });
+
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.authorize" id="apidoc.element.airplay-js.Device.prototype.authorize">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.authorize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.authorize = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.close" id="apidoc.element.airplay-js.Device.prototype.close">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.close = function () {
+    if ( this.client ) {
+        this.client.close();
+    }
+
+    this.client = null;
+    this.ready = !1;
+
+    this.emit( 'close', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.getInfo" id="apidoc.element.airplay-js.Device.prototype.getInfo">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.getInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.getInfo = function () {
+    var info = this.info;
+    var txtRecord = info.txtRecord || {};
+    var serverInfo = this.serverInfo;
+
+    return {
+        id: this.id,
+        name: info.name,
+        fullName: info.fullname,
+        deviceId: txtRecord.deviceid || serverInfo.deviceId,
+        features: serverInfo.features || txtRecord.features,
+        model: serverInfo.model,
+        interfaceName: info.networkInterface,
+        interfaceIndex: info.interfaceIndex,
+        addresses: info.addresses,
+
+        flags: txtRecord.flags,
+        pk: txtRecord.pk,
+
+        osVersion: serverInfo.osVersion,
+        protocolVersion: serverInfo.protocolVersion,
+        sourceVersion: serverInfo.sourceVersion || txtRecord.srcvers,
+        vv: serverInfo.vv || txtRecord.vv,
+
+        slideshowFeatures: [],
+        supportedContentTypes: []
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.isReady" id="apidoc.element.airplay-js.Device.prototype.isReady">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.isReady
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.isReady = function () {
+  return !!this.ready;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.match" id="apidoc.element.airplay-js.Device.prototype.match">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.match
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.match = function ( info ) {
+    for ( var key in info ) {
+        if ( this.info[ key ] != info[ key ] ) {
+            return !1;
+        }
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.onReady" id="apidoc.element.airplay-js.Device.prototype.onReady">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.onReady
+        <span class="apidocSignatureSpan">( callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.onReady = function ( callback ) {
+    this.ready = !0;
+
+    if ( callback ) {
+        callback( this );
+    }
+
+    this.emit( 'ready', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.photo" id="apidoc.element.airplay-js.Device.prototype.photo">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.photo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.photo = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.play" id="apidoc.element.airplay-js.Device.prototype.play">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.play
+        <span class="apidocSignatureSpan">(media, position, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.play = function (media, position, callback){
+    var self = this
+
+    //#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+    //
+    console.log(typeof(media))
+    self.hls.start( 7001 + this.id );
+
+    console.log("going to play: "+media)
+    self.hls.open( media , function ( info ) {
+        device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+            console.info( '-&gt;&gt; ', res );
+            setTimeout(function(){
+                device.status( function ( info ) {
+                    console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                    if ( info ) {
+                        console.log(info)
+                    }
+                });
+            }, 4000);
+        });
+    });
+    self.hls.on('NoFFMPEG', function(){
+        self.simpleplay(media, position, callback);
+        self.emit('NoFFMPEG')
+    })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.rate" id="apidoc.element.airplay-js.Device.prototype.rate">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.rate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.rate = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.reverse" id="apidoc.element.airplay-js.Device.prototype.reverse">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.reverse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.reverse = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.scrub" id="apidoc.element.airplay-js.Device.prototype.scrub">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.scrub
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.scrub = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.simpleplay" id="apidoc.element.airplay-js.Device.prototype.simpleplay">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.simpleplay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.simpleplay = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.status" id="apidoc.element.airplay-js.Device.prototype.status">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.status = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.stop" id="apidoc.element.airplay-js.Device.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.stop = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.volume" id="apidoc.element.airplay-js.Device.prototype.volume">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device.prototype.volume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Device.prototype.volume = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS" id="apidoc.element.airplay-js.HLS">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HLSServer( options ) {
+    events.EventEmitter.call( this );
+    var ops = this.options = options || {};
+
+    // æ˜¯å¦å¯ç”¨æµæ¨¡å¼(å½±å“m3u8ç”Ÿæˆæœºåˆ¶)
+    // ops.streaming = !!ops.streaming;
+    // TSæ–‡ä»¶ç¼“å­˜
+    ops.cache = !!ops.cache;
+    // TSåˆ†ç‰‡æ—¶é•¿(s)
+    ops.duration = ops.duration || 20;
+    // ç¼–è§£ç&nbsp;åº“ç›®å½•
+    ops.lib = path.normalize( ops.lib || ( __dirname + '/../dep' ) ) + '/';
+    if ( !fs.existsSync( ops.lib ) ) {
+        ops.lib = '';
+    }
+    // TSåˆ†ç‰‡è¾“å‡ºç›®å½•
+    ops.out = path.normalize( ops.out || ( '/tmp' ) ) + '/';
+    if ( !fs.existsSync( ops.out ) ) {
+        fs.mkdirSync( ops.out );
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a HLS Server
+*
+* @param {Object=} options
+* @return {HLS} instance of HLS
+*/
+exports.createHLS = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">HLS</span>( options );
+};
+
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg" id="apidoc.element.airplay-js.HLS.prototype.command4FFMpeg">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.command4FFMpeg
+        <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.command4FFMpeg = function ( tsIndex, tsOutput ) {
+    var opt = [
+        '-y',
+        '-i',
+        this.file,
+        '-t', this.options.duration,
+        '-ss', this.options.duration * (tsIndex - 1),
+    ];
+
+    var isH264 = this.videoInfo.streams.some(function ( s ) {
+        return s.codec_name === 'h264';
+    });
+
+    // h264 &amp;&amp; aac
+    if ( isH264 ) {
+        opt = opt.concat([
+            '-c:v', 'libx264', // libx264 || copy
+            '-c:a', 'aac', // aac || copy
+            '-strict', '-2',
+            '-vbsf', 'h264_mp4toannexb'
+        ]);
+    }
+    else {
+        opt = opt.concat([
+            '-c:v', 'linx264',
+            '-c:a', 'aac',
+            // '-g', 100,
+            // '-vcodec', 'copy',
+            // '-acodec', 'copy',
+            '-b', '500k',
+            '-ac', '2',
+            '-ar', '44100',
+            '-ab', '32k'
+        ]);
+    }
+
+    // TODO: HLS by ffmpeg
+    // opt = opt.concat([
+    //     '-f', 'hls',
+    //     '-hls_time', '10',
+    //     '-hls_list_size', '999',
+    //     'out/0.m3u8'
+    // ]);
+
+    opt.push( tsOutput );
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe" id="apidoc.element.airplay-js.HLS.prototype.command4FFProbe">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.command4FFProbe
+        <span class="apidocSignatureSpan">( filePath )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.command4FFProbe = function ( filePath ) {
+    var opt = [
+        '-v',
+        'quiet',
+        '-print_format', 'json',
+        '-show_format',
+        '-show_streams',
+        filePath
+    ];
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.getURI" id="apidoc.element.airplay-js.HLS.prototype.getURI">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.getURI
+        <span class="apidocSignatureSpan">( type, index )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.getURI = function ( type, index ) {
+    if ( type === 'video' ) {
+        return '/stream/0.m3u8';
+    }
+    else if ( type === 'audio' ) {
+        return '/stream/1.m3u8';
+    }
+    else if ( type === 'iframes' ) {
+        return '/iframes.m3u8';
+    }
+    else if ( type === 'segment' ) {
+        return '/stream/0/' + index + '.ts';
+    }
+    else {
+        return this.baseURI;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.httpHandler" id="apidoc.element.airplay-js.HLS.prototype.httpHandler">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.httpHandler
+        <span class="apidocSignatureSpan">( request, response )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.httpHandler = function ( request, response ) {
+    var ops = this.options;
+    var header = {};
+    var body = [];
+    var uri = url.parse( request.url, true );
+    var self = this
+
+    this.emit( 'request', request );
+
+    if ( uri.pathname === '/' ) {
+        console.log("attending /")
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="und",NAME="Original Audio",DEFAULT=YES,AUTOSELECT=YES' );
+        console.log(this.subtitles)
+        if(this.subtitles){
+            this.subtitles.forEach(function(each){
+                body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE
+="en",URI="http://'+self.address+':'+self.port+'/subtitles/'+each.language+'.m3u8"' )
+            })
+        }
+        //body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",DEFAULT=NO,AUTOSELECT=NO,FORCED=YES,LANGUAGE="en
+",URI="http://carlosguerrero.com/b.m3u8"' )
+
+        // stream#0
+        if(this.subtitles){
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio",SUBTITLES
+="subs"' );
+        }else{
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio"' );
+        }
+        body.push( this.getURI( 'video' ) );
+
+        // // stream#1
+        // body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="ac-3,avc1.640028",AUDIO="audio"' );
+        // body.push( '/stream/1.m3u8' );
+
+        // // frames
+        // body.push( '#EXT-X-I-FRAME-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="avc1.640028",URI="/iframes.m3u8"' );
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header[ 'Content-Length' ] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+
+        response.end();
+    }
+    else if ( uri.pathname === this.getURI( 'video' ) ) {
+        var tsDuration = ops.duration;
+        var videoDuration = parseFloat( this.videoInfo.format.duration, 10 );
+
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-VERSION:3' );
+        // body.push( '#EXT-X-PLAYLIST-TYPE:EVENT' );
+        body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+        body.push( '#EXT-X-TARGETDURATION:' + tsDuration );
+        body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+        body.push( '#EXT-X-ALLOW-CACHE:' + ( ops.cache ? 'YES' : 'NO') );
+
+        for ( var i = 1, n = this.segmentSize; i &lt; n; i++ ) {
+            body.push(
+                '#EXTINF:'
+                // æœ€åŽä¸€ä¸ªåˆ†æ®µä¸€èˆ¬ä¼šå°‘ä¸€ç‚¹ï¼Œéœ€è¦ç²¾ç¡®è®¡ç®—ä¸‹
+                + ( i &gt;= n ? ( videoDuration % tsDuration || tsDuration ) : tsDuration )
+                + ','
+            );
+            body.push( this.getURI( 'segment', i ) );
+        }
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Connection'] = 'Keep-Alive';
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header['Content-Length'] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+        response.end();
+    }
+    // else if ( uri.pathname === this.getURI( 'audio' ) ) {
+    // }
+    // else if ( uri.pathname === this.getURI( 'iframes' ) ) {
+    //     body.push( '#EXTM3U' );
+    //     body.push( '#EXT-X-VERSION:4' );
+    //     body.push( '#EXT-X-TARGETDURATION:3' );
+    //     body.push( '#EXT-X-I-FRAMES-ONLY' );
+    //     body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+    //     body.push( '#EXT-X-ALLOW-CACHE:YES' );
+    //     body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+
+    //     body.push( '/iframes/0.ts' );
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+    //     body.push( '/iframes/1.ts' );
+    //     ...
+
+    //     body.push( '#EXT-X-ENDLIST' );
+    // }
+    else if ( /^\/stream\/0\//.test( uri.pathname ) ) ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.open" id="apidoc.element.airplay-js.HLS.prototype.open">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.open
+        <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.open = function ( fileFullPath, callback ) {
+    var self = this;
+    var media = fileFullPath
+
+    console.log("fileFullPath:")
+    console.log(fileFullPath)
+    console.log(typeof(fileFullPath))
+    if (typeof(fileFullPath) != 'string'){
+        self.subtitles = media.subtitles
+        fileFullPath = media.file
+    }
+
+    if ( this.openThread ) {
+        this.openThread.kill();
+    }
+
+    this.file = fileFullPath;
+
+    var whichCommand = /^win/.test(process.platform) ? 'where' : 'which'
+
+    self.checkFirst = spawn(whichCommand,['ffprobe'])
+    self.checkFirst.on('close', function(data){
+        console.log("x:"+data)
+        if(data!=0){
+            console.log("No FFMPEG FOUND :(")
+            self.emit("NoFFMPEG")
+            return 0;
+        }
+    })
+    self.checkFirst.stdout.on('data', function(data){
+        console.log("d:"+data)
+
+        // # -------------------------------------------------- # //
+        // TODO: find the ffmpeg path when the object is constructed instead of resolving it now.
+        // PATCH to actually find the ffmpeg executable
+        var ffmpegPath = data.toString("utf8").trim()
+        if(data.length &gt; 0 &amp;&amp; fs.existsSync(ffmpegPath)) {
+            var ffmpegPath = path.dirname(ffmpegPath) + path.sep
+            if(self.options.lib != ffmpegPath) {
+                self.options.lib = ffmpegPath
+                console.log("FFMPEG path set to " + ffmpegPath)
+            }
+        } else {
+            self.emit("NoFFMPEG")
+            return; // We assume that which will return != 0 so on('close') will handle the NoFFMPEG case.
+        }
+        // # -------------------------------------------------- # //
+
+        if(data.length &gt;0){
+            self.openThread = spawn(
+                self.options.lib + 'ffprobe',
+                self.command4FFProbe( self.file ));
+            var output = '';
+            self.openThread.stdout.on( 'data', function ( chunk ) {
+                output += chunk;
+            });
+            self.openThread.stderr.on( 'data', function ( err ) {
+                self.emit(
+                    'error',
+                    { type: 'open', err: err, file: fileFullPath }
+                );
+            });
+            self.openThread.stdout.on( 'end', function () {
+                var json;
+                try {
+                    json = JSON.parse( output );
+                } catch (e) {
+                    self.emit(
+                        'error',
+                        { type: 'open', err: e.message, file: fileFullPath }
+                    );
+                }
+                if ( json ) {
+                    self.videoInfo = json;
+                    // update store
+                    self.segmentSize = Math.ceil( parseFloat( json.format.duration, 10 ) / self.options.duration );
+                    self.emit( 'open', { file: fileFullPath, info: json } );
+                }
+                if ( callback ) {
+                    callback( json );
+                }
+                self.openThread = null;
+            });
+            return self;
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.segment" id="apidoc.element.airplay-js.HLS.prototype.segment">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.segment
+        <span class="apidocSignatureSpan">( index, req, res )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.segment = function ( index, req, res ) {
+    var self = this;
+    var outfile = this.options.out + index + '.ts';
+
+    // skip if exists
+    if ( fs.existsSync( outfile ) &amp;&amp; false) {
+        fs.createReadStream( outfile ).pipe( res );
+        return;
+    }
+
+    var f = spawn(
+        this.options.lib + 'ffmpeg',
+        this.command4FFMpeg( index, outfile )
+    );
+
+    var output = '';
+    f.stdout.on( 'data', function ( chunk ) {
+        output += chunk;
+        self.emit( 'process', { index: index, file: outfile, out: chunk } );
+    });
+    f.stdout.on( 'error', function ( err ) {
+        self.emit(
+            'error',
+            { type: 'segment', err: err, index: index, file: outfile }
+        );
+    });
+
+    f.stdout.on( 'end', function () {
+        self.emit( 'segment', { index: index, file: outfile, out: output } );
+        fs.createReadStream( outfile ).pipe( res );
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles" id="apidoc.element.airplay-js.HLS.prototype.setSubtitles">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.setSubtitles
+        <span class="apidocSignatureSpan">( subtitles )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.setSubtitles = function ( subtitles ){
+    console.log("Setting subtitles to: "+subtitles)
+    var self = this
+    self.subtitles = subtitles
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.start" id="apidoc.element.airplay-js.HLS.prototype.start">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.start
+        <span class="apidocSignatureSpan">( port )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.start = function ( port ) {
+    if ( !this.started ) {
+        this.started = !0;
+
+        this.baseURI = 'http://' + IP_LOCAL + ( port === 80 ? '' : ':' + port );
+
+        this.server = http.createServer( this.httpHandler.bind( this ) );
+        this.server.listen( port, IP_LOCAL );
+
+        this.emit( 'start', { host: IP_LOCAL, port: port } );
+    }
+
+    this.port = port
+    this.address = IP_LOCAL
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.stop" id="apidoc.element.airplay-js.HLS.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS.prototype.stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">HLS.prototype.stop = function () {
+    if ( this.started &amp;&amp; this.server ) {
+        this.server.close();
+        this.emit( 'stop' );
+    }
+
+    this.started = !1;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.connect" id="apidoc.element.airplay-js.connect">
+        function <span class="apidocSignatureSpan">airplay-js.</span>connect
+        <span class="apidocSignatureSpan">( host, port, pass, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function ( host, port, pass, callback ) {
+    throw 'not yet implemented';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.createBrowser" id="apidoc.element.airplay-js.createBrowser">
+        function <span class="apidocSignatureSpan">airplay-js.</span>createBrowser
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBrowser = function ( options ) {
+    return new exports.Browser( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	npm install airplay-js
+
+## Usage
+
+``` javascript
+// remote video
+var browser = require( 'airplay-js' ).<span class="apidocCodeKeywordSpan">createBrowser</span>();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.start();
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.createHLS" id="apidoc.element.airplay-js.createHLS">
+        function <span class="apidocSignatureSpan">airplay-js.</span>createHLS
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createHLS = function ( options ) {
+    return new exports.HLS( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            self.serverInfo = info;
+            self.onReady( callback );
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).<span class="apidocCodeKeywordSpan">createHLS</span>();
+self.hls.on( 'start', function () {
+    console.info( '[HLS] start: %s', self.hls.getURI() );
+});
+self.hls.on( 'stop', function () {
+    console.info( '[HLS] stop: %s', self.hls.getURI() );
+});
+self.hls.on( 'request', function ( req ) {
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser" id="apidoc.module.airplay-js.Browser">module airplay-js.Browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.Browser" id="apidoc.element.airplay-js.Browser.Browser">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Browser
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser = function ( options ) {
+    events.EventEmitter.call( this );
+    this.init( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+*/
+exports.createBrowser = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">Browser</span>( options );
+};
+
+/**
+* connect a airplay device
+*
+* @param {string} host airplay host
+* @param {number} port airplay port
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.super_" id="apidoc.element.airplay-js.Browser.super_">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype" id="apidoc.module.airplay-js.Browser.prototype">module airplay-js.Browser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevice" id="apidoc.element.airplay-js.Browser.prototype.getDevice">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevice
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDevice = function ( info ) {
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( device.match( info ) ) {
+            return device;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.isValid( info ) ) {
+            return;
+        }
+
+        var device = self.<span class="apidocCodeKeywordSpan">getDevice</span>( info );
+        if ( device ) {
+            device.close();
+        }
+    });
+};
+
+Browser.prototype.start = function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById" id="apidoc.element.airplay-js.Browser.prototype.getDeviceById">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDeviceById
+        <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeviceById = function ( deviceId, skipCheck ) {
+    var device = this.devices[ deviceId ];
+    if ( device &amp;&amp; ( skipCheck || device.isReady() ) ) {
+        return device;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevices" id="apidoc.element.airplay-js.Browser.prototype.getDevices">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevices
+        <span class="apidocSignatureSpan">( skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDevices = function ( skipCheck ) {
+    var devices = [];
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( skipCheck || device.isReady() ) {
+            devices.push( device );
+        }
+    }
+    return devices;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.init" id="apidoc.element.airplay-js.Browser.prototype.init">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>init
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function ( options ) {
+    var self = this;
+    var nextDeviceId = 0;
+
+    this.devices = {};
+    this.addresses = []
+
+    var browser = mdns.createBrowser(mdns.tcp('airplay'));
+
+    browser.on('ready', function () {
+        browser.discover();
+    });
+
+    browser.on('serviceUp', function(data) {
+        if(data.port &amp;&amp; data.port == 7000 &amp;&amp; self.addresses.indexOf(data.address) &lt; 0){
+            var info = [data.address]
+            var name = data.name
+            self.addresses.push(data.address)
+
+            device = new Device( nextDeviceId++, info , name );
+            device.on( 'ready', function( d ) {
+                self.emit( 'deviceOn', d );
+            });
+            device.on( 'close', function( d ) {
+                delete self.devices[ d.id ];
+                self.emit( 'deviceOff', d );
+            });
+
+            self.devices[ device.id ] = device;
+        }
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.isValid( info ) ) {
+            return;
+        }
+
+        var device = self.getDevice( info );
+        if ( device ) {
+            device.close();
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var mdns = require( 'mdns-js' );
+
+var Device = require( './device' ).Device;
+
+var Browser = function( options ) {
+    events.EventEmitter.call( this );
+    this.<span class="apidocCodeKeywordSpan">init</span>( options );
+};
+
+util.inherits( Browser, events.EventEmitter );
+
+exports.Browser = Browser;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.isValid" id="apidoc.element.airplay-js.Browser.prototype.isValid">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>isValid
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function ( info ) {
+    if ( !info || !/^en\d+$/.test( info.networkInterface ) ) {
+        return !1;
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    self.devices[ device.id ] = device;
+}
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.<span class="apidocCodeKeywordSpan">isValid</span>( info ) ) {
+    return;
+}
+
+var device = self.getDevice( info );
+if ( device ) {
+    device.close();
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.start" id="apidoc.element.airplay-js.Browser.prototype.start">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    this.emit( 'start' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+## Testing
+
+```
+npm install
+npm test
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.stop" id="apidoc.element.airplay-js.Browser.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    this.emit( 'stop' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.getDevice" id="apidoc.module.airplay-js.Browser.prototype.getDevice">module airplay-js.Browser.prototype.getDevice</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevice.getDevice" id="apidoc.element.airplay-js.Browser.prototype.getDevice.getDevice">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevice
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDevice = function ( info ) {
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( device.match( info ) ) {
+            return device;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.isValid( info ) ) {
+            return;
+        }
+
+        var device = self.<span class="apidocCodeKeywordSpan">getDevice</span>( info );
+        if ( device ) {
+            device.close();
+        }
+    });
+};
+
+Browser.prototype.start = function () {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.getDeviceById" id="apidoc.module.airplay-js.Browser.prototype.getDeviceById">module airplay-js.Browser.prototype.getDeviceById</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDeviceById.getDeviceById" id="apidoc.element.airplay-js.Browser.prototype.getDeviceById.getDeviceById">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDeviceById
+        <span class="apidocSignatureSpan">( deviceId, skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDeviceById = function ( deviceId, skipCheck ) {
+    var device = this.devices[ deviceId ];
+    if ( device &amp;&amp; ( skipCheck || device.isReady() ) ) {
+        return device;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.getDevices" id="apidoc.module.airplay-js.Browser.prototype.getDevices">module airplay-js.Browser.prototype.getDevices</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.getDevices.getDevices" id="apidoc.element.airplay-js.Browser.prototype.getDevices.getDevices">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>getDevices
+        <span class="apidocSignatureSpan">( skipCheck )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getDevices = function ( skipCheck ) {
+    var devices = [];
+    for ( var deviceId in this.devices ) {
+        var device = this.devices[ deviceId ];
+        if ( skipCheck || device.isReady() ) {
+            devices.push( device );
+        }
+    }
+    return devices;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.init" id="apidoc.module.airplay-js.Browser.prototype.init">module airplay-js.Browser.prototype.init</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.init.init" id="apidoc.element.airplay-js.Browser.prototype.init.init">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>init
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function ( options ) {
+    var self = this;
+    var nextDeviceId = 0;
+
+    this.devices = {};
+    this.addresses = []
+
+    var browser = mdns.createBrowser(mdns.tcp('airplay'));
+
+    browser.on('ready', function () {
+        browser.discover();
+    });
+
+    browser.on('serviceUp', function(data) {
+        if(data.port &amp;&amp; data.port == 7000 &amp;&amp; self.addresses.indexOf(data.address) &lt; 0){
+            var info = [data.address]
+            var name = data.name
+            self.addresses.push(data.address)
+
+            device = new Device( nextDeviceId++, info , name );
+            device.on( 'ready', function( d ) {
+                self.emit( 'deviceOn', d );
+            });
+            device.on( 'close', function( d ) {
+                delete self.devices[ d.id ];
+                self.emit( 'deviceOff', d );
+            });
+
+            self.devices[ device.id ] = device;
+        }
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.isValid( info ) ) {
+            return;
+        }
+
+        var device = self.getDevice( info );
+        if ( device ) {
+            device.close();
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var mdns = require( 'mdns-js' );
+
+var Device = require( './device' ).Device;
+
+var Browser = function( options ) {
+    events.EventEmitter.call( this );
+    this.<span class="apidocCodeKeywordSpan">init</span>( options );
+};
+
+util.inherits( Browser, events.EventEmitter );
+
+exports.Browser = Browser;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.isValid" id="apidoc.module.airplay-js.Browser.prototype.isValid">module airplay-js.Browser.prototype.isValid</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.isValid.isValid" id="apidoc.element.airplay-js.Browser.prototype.isValid.isValid">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>isValid
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isValid = function ( info ) {
+    if ( !info || !/^en\d+$/.test( info.networkInterface ) ) {
+        return !1;
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    });
+
+    self.devices[ device.id ] = device;
+}
+    });
+
+    browser.on('serviceDown', function(info) {
+      if ( !self.<span class="apidocCodeKeywordSpan">isValid</span>( info ) ) {
+    return;
+}
+
+var device = self.getDevice( info );
+if ( device ) {
+    device.close();
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.start" id="apidoc.module.airplay-js.Browser.prototype.start">module airplay-js.Browser.prototype.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.start.start" id="apidoc.element.airplay-js.Browser.prototype.start.start">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>start
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function () {
+    this.emit( 'start' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+## Testing
+
+```
+npm install
+npm test
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Browser.prototype.stop" id="apidoc.module.airplay-js.Browser.prototype.stop">module airplay-js.Browser.prototype.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Browser.prototype.stop.stop" id="apidoc.element.airplay-js.Browser.prototype.stop.stop">
+        function <span class="apidocSignatureSpan">airplay-js.Browser.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    this.emit( 'stop' );
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device" id="apidoc.module.airplay-js.Device">module airplay-js.Device</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.Device" id="apidoc.element.airplay-js.Device.Device">
+        function <span class="apidocSignatureSpan">airplay-js.</span>Device
+        <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Device( id, info, name, callback ) {
+    var self = this;
+
+    events.EventEmitter.call( this );
+
+    this.id = id;
+    this.info = info;
+    this.name = name;
+    // this.serverInfo = null;
+    this.pingDelay = 5 * 1000; // å¿ƒè·³é—´éš”
+
+    this.client = new Client(
+        {
+            host: info[0], port: 7000
+            // ,user: 'zfkun', pass: ''
+        },
+        function () {
+            self.client.serverInfo(function( info ) {
+                self.serverInfo = info;
+                self.onReady( callback );
+            });
+        }
+    );
+    this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+    self.hls = require( '../airplay' ).createHLS();
+    self.hls.on( 'start', function () {
+        console.info( '[HLS] start: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'stop', function () {
+        console.info( '[HLS] stop: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'request', function ( req ) {
+        // var uri = url.parse( req.url, true );
+        console.info( '[HLS] request: %s', req.url );
+    });
+    self.hls.on( 'process', function ( d ) {
+        console.info( '[HLS] segment process: %s, %s, %s', d.index, d.file, d.out.toString() );
+    });
+    self.hls.on( 'segment', function ( d ) {
+        console.info( '[HLS] segment created: %s, %s, %s', d.index, d.file, d.out );
+    });
+    self.hls.on( 'open', function ( d ) {
+        console.info( '[HLS] opend: %s, %s', d.file, util.inspect( d.info ) );
+    });
+    self.hls.on( 'error', function ( err ) {
+        console.info( '[HLS] segment error: ', util.inspect( err ) );
+    });
+
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.super_" id="apidoc.element.airplay-js.Device.super_">
+        function <span class="apidocSignatureSpan">airplay-js.Device.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype" id="apidoc.module.airplay-js.Device.prototype">module airplay-js.Device.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.authorize" id="apidoc.element.airplay-js.Device.prototype.authorize">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>authorize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.close" id="apidoc.element.airplay-js.Device.prototype.close">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+    if ( this.client ) {
+        this.client.close();
+    }
+
+    this.client = null;
+    this.ready = !1;
+
+    this.emit( 'close', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+browser.on('serviceDown', function(info) {
+  if ( !self.isValid( info ) ) {
+        return;
+    }
+
+    var device = self.getDevice( info );
+    if ( device ) {
+        device.<span class="apidocCodeKeywordSpan">close</span>();
+    }
+});
+};
+
+Browser.prototype.start = function () {
+this.emit( 'start' );
+return this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.getInfo" id="apidoc.element.airplay-js.Device.prototype.getInfo">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>getInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInfo = function () {
+    var info = this.info;
+    var txtRecord = info.txtRecord || {};
+    var serverInfo = this.serverInfo;
+
+    return {
+        id: this.id,
+        name: info.name,
+        fullName: info.fullname,
+        deviceId: txtRecord.deviceid || serverInfo.deviceId,
+        features: serverInfo.features || txtRecord.features,
+        model: serverInfo.model,
+        interfaceName: info.networkInterface,
+        interfaceIndex: info.interfaceIndex,
+        addresses: info.addresses,
+
+        flags: txtRecord.flags,
+        pk: txtRecord.pk,
+
+        osVersion: serverInfo.osVersion,
+        protocolVersion: serverInfo.protocolVersion,
+        sourceVersion: serverInfo.sourceVersion || txtRecord.srcvers,
+        vv: serverInfo.vv || txtRecord.vv,
+
+        slideshowFeatures: [],
+        supportedContentTypes: []
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.isReady" id="apidoc.element.airplay-js.Device.prototype.isReady">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>isReady
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isReady = function () {
+  return !!this.ready;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return device;
+    }
+}
+};
+
+Browser.prototype.getDeviceById = function ( deviceId, skipCheck ) {
+var device = this.devices[ deviceId ];
+if ( device &amp;&amp; ( skipCheck || device.<span class="apidocCodeKeywordSpan">isReady</span>() ) ) {
+    return device;
+}
+};
+
+Browser.prototype.getDevices = function ( skipCheck ) {
+var devices = [];
+for ( var deviceId in this.devices ) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.match" id="apidoc.element.airplay-js.Device.prototype.match">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>match
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">match = function ( info ) {
+    for ( var key in info ) {
+        if ( this.info[ key ] != info[ key ] ) {
+            return !1;
+        }
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return !0;
+};
+
+Browser.prototype.getDevice = function ( info ) {
+for ( var deviceId in this.devices ) {
+    var device = this.devices[ deviceId ];
+    if ( device.<span class="apidocCodeKeywordSpan">match</span>( info ) ) {
+        return device;
+    }
+}
+};
+
+Browser.prototype.getDeviceById = function ( deviceId, skipCheck ) {
+var device = this.devices[ deviceId ];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.onReady" id="apidoc.element.airplay-js.Device.prototype.onReady">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>onReady
+        <span class="apidocSignatureSpan">( callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onReady = function ( callback ) {
+    this.ready = !0;
+
+    if ( callback ) {
+        callback( this );
+    }
+
+    this.emit( 'ready', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    {
+        host: info[0], port: 7000
+        // ,user: 'zfkun', pass: ''
+    },
+    function () {
+        self.client.serverInfo(function( info ) {
+            self.serverInfo = info;
+            self.<span class="apidocCodeKeywordSpan">onReady</span>( callback );
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).createHLS();
+self.hls.on( 'start', function () {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.photo" id="apidoc.element.airplay-js.Device.prototype.photo">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>photo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">photo = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.play" id="apidoc.element.airplay-js.Device.prototype.play">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>play
+        <span class="apidocSignatureSpan">(media, position, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">play = function (media, position, callback){
+    var self = this
+
+    //#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+    //
+    console.log(typeof(media))
+    self.hls.start( 7001 + this.id );
+
+    console.log("going to play: "+media)
+    self.hls.open( media , function ( info ) {
+        device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+            console.info( '-&gt;&gt; ', res );
+            setTimeout(function(){
+                device.status( function ( info ) {
+                    console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                    if ( info ) {
+                        console.log(info)
+                    }
+                });
+            }, 4000);
+        });
+    });
+    self.hls.on('NoFFMPEG', function(){
+        self.simpleplay(media, position, callback);
+        self.emit('NoFFMPEG')
+    })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Usage
+
+``` javascript
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.<span class="apidocCodeKeywordSpan">play</span>( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.start();
+```
+
+## Testing
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.rate" id="apidoc.element.airplay-js.Device.prototype.rate">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>rate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rate = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.reverse" id="apidoc.element.airplay-js.Device.prototype.reverse">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>reverse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverse = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.scrub" id="apidoc.element.airplay-js.Device.prototype.scrub">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>scrub
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrub = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.simpleplay" id="apidoc.element.airplay-js.Device.prototype.simpleplay">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>simpleplay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simpleplay = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+//
+console.log(typeof(media))
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.open( media , function ( info ) {
+    device.<span class="apidocCodeKeywordSpan">simpleplay</span>( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.status( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+                }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.status" id="apidoc.element.airplay-js.Device.prototype.status">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">status = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.open( media , function ( info ) {
+    device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.<span class="apidocCodeKeywordSpan">status</span>( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+                }
+            });
+        }, 4000);
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.stop" id="apidoc.element.airplay-js.Device.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.volume" id="apidoc.element.airplay-js.Device.prototype.volume">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>volume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">volume = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.authorize" id="apidoc.module.airplay-js.Device.prototype.authorize">module airplay-js.Device.prototype.authorize</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.authorize.authorize" id="apidoc.element.airplay-js.Device.prototype.authorize.authorize">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>authorize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">authorize = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.close" id="apidoc.module.airplay-js.Device.prototype.close">module airplay-js.Device.prototype.close</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.close.close" id="apidoc.element.airplay-js.Device.prototype.close.close">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>close
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">close = function () {
+    if ( this.client ) {
+        this.client.close();
+    }
+
+    this.client = null;
+    this.ready = !1;
+
+    this.emit( 'close', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+browser.on('serviceDown', function(info) {
+  if ( !self.isValid( info ) ) {
+        return;
+    }
+
+    var device = self.getDevice( info );
+    if ( device ) {
+        device.<span class="apidocCodeKeywordSpan">close</span>();
+    }
+});
+};
+
+Browser.prototype.start = function () {
+this.emit( 'start' );
+return this;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.getInfo" id="apidoc.module.airplay-js.Device.prototype.getInfo">module airplay-js.Device.prototype.getInfo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.getInfo.getInfo" id="apidoc.element.airplay-js.Device.prototype.getInfo.getInfo">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>getInfo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getInfo = function () {
+    var info = this.info;
+    var txtRecord = info.txtRecord || {};
+    var serverInfo = this.serverInfo;
+
+    return {
+        id: this.id,
+        name: info.name,
+        fullName: info.fullname,
+        deviceId: txtRecord.deviceid || serverInfo.deviceId,
+        features: serverInfo.features || txtRecord.features,
+        model: serverInfo.model,
+        interfaceName: info.networkInterface,
+        interfaceIndex: info.interfaceIndex,
+        addresses: info.addresses,
+
+        flags: txtRecord.flags,
+        pk: txtRecord.pk,
+
+        osVersion: serverInfo.osVersion,
+        protocolVersion: serverInfo.protocolVersion,
+        sourceVersion: serverInfo.sourceVersion || txtRecord.srcvers,
+        vv: serverInfo.vv || txtRecord.vv,
+
+        slideshowFeatures: [],
+        supportedContentTypes: []
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.isReady" id="apidoc.module.airplay-js.Device.prototype.isReady">module airplay-js.Device.prototype.isReady</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.isReady.isReady" id="apidoc.element.airplay-js.Device.prototype.isReady.isReady">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>isReady
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isReady = function () {
+  return !!this.ready;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        return device;
+    }
+}
+};
+
+Browser.prototype.getDeviceById = function ( deviceId, skipCheck ) {
+var device = this.devices[ deviceId ];
+if ( device &amp;&amp; ( skipCheck || device.<span class="apidocCodeKeywordSpan">isReady</span>() ) ) {
+    return device;
+}
+};
+
+Browser.prototype.getDevices = function ( skipCheck ) {
+var devices = [];
+for ( var deviceId in this.devices ) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.match" id="apidoc.module.airplay-js.Device.prototype.match">module airplay-js.Device.prototype.match</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.match.match" id="apidoc.element.airplay-js.Device.prototype.match.match">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>match
+        <span class="apidocSignatureSpan">( info )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">match = function ( info ) {
+    for ( var key in info ) {
+        if ( this.info[ key ] != info[ key ] ) {
+            return !1;
+        }
+    }
+    return !0;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+return !0;
+};
+
+Browser.prototype.getDevice = function ( info ) {
+for ( var deviceId in this.devices ) {
+    var device = this.devices[ deviceId ];
+    if ( device.<span class="apidocCodeKeywordSpan">match</span>( info ) ) {
+        return device;
+    }
+}
+};
+
+Browser.prototype.getDeviceById = function ( deviceId, skipCheck ) {
+var device = this.devices[ deviceId ];
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.onReady" id="apidoc.module.airplay-js.Device.prototype.onReady">module airplay-js.Device.prototype.onReady</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.onReady.onReady" id="apidoc.element.airplay-js.Device.prototype.onReady.onReady">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>onReady
+        <span class="apidocSignatureSpan">( callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onReady = function ( callback ) {
+    this.ready = !0;
+
+    if ( callback ) {
+        callback( this );
+    }
+
+    this.emit( 'ready', this );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    {
+        host: info[0], port: 7000
+        // ,user: 'zfkun', pass: ''
+    },
+    function () {
+        self.client.serverInfo(function( info ) {
+            self.serverInfo = info;
+            self.<span class="apidocCodeKeywordSpan">onReady</span>( callback );
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).createHLS();
+self.hls.on( 'start', function () {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.photo" id="apidoc.module.airplay-js.Device.prototype.photo">module airplay-js.Device.prototype.photo</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.photo.photo" id="apidoc.element.airplay-js.Device.prototype.photo.photo">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>photo
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">photo = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.play" id="apidoc.module.airplay-js.Device.prototype.play">module airplay-js.Device.prototype.play</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.play.play" id="apidoc.element.airplay-js.Device.prototype.play.play">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>play
+        <span class="apidocSignatureSpan">(media, position, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">play = function (media, position, callback){
+    var self = this
+
+    //#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+    //
+    console.log(typeof(media))
+    self.hls.start( 7001 + this.id );
+
+    console.log("going to play: "+media)
+    self.hls.open( media , function ( info ) {
+        device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+            console.info( '-&gt;&gt; ', res );
+            setTimeout(function(){
+                device.status( function ( info ) {
+                    console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                    if ( info ) {
+                        console.log(info)
+                    }
+                });
+            }, 4000);
+        });
+    });
+    self.hls.on('NoFFMPEG', function(){
+        self.simpleplay(media, position, callback);
+        self.emit('NoFFMPEG')
+    })
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Usage
+
+``` javascript
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.<span class="apidocCodeKeywordSpan">play</span>( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.start();
+```
+
+## Testing
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.rate" id="apidoc.module.airplay-js.Device.prototype.rate">module airplay-js.Device.prototype.rate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.rate.rate" id="apidoc.element.airplay-js.Device.prototype.rate.rate">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>rate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rate = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.reverse" id="apidoc.module.airplay-js.Device.prototype.reverse">module airplay-js.Device.prototype.reverse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.reverse.reverse" id="apidoc.element.airplay-js.Device.prototype.reverse.reverse">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>reverse
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverse = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.scrub" id="apidoc.module.airplay-js.Device.prototype.scrub">module airplay-js.Device.prototype.scrub</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.scrub.scrub" id="apidoc.element.airplay-js.Device.prototype.scrub.scrub">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>scrub
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scrub = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.simpleplay" id="apidoc.module.airplay-js.Device.prototype.simpleplay">module airplay-js.Device.prototype.simpleplay</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.simpleplay.simpleplay" id="apidoc.element.airplay-js.Device.prototype.simpleplay.simpleplay">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>simpleplay
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">simpleplay = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+//
+console.log(typeof(media))
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.open( media , function ( info ) {
+    device.<span class="apidocCodeKeywordSpan">simpleplay</span>( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.status( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+                }
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.status" id="apidoc.module.airplay-js.Device.prototype.status">module airplay-js.Device.prototype.status</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.status.status" id="apidoc.element.airplay-js.Device.prototype.status.status">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">status = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.open( media , function ( info ) {
+    device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.<span class="apidocCodeKeywordSpan">status</span>( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+                }
+            });
+        }, 4000);
+    });
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.stop" id="apidoc.module.airplay-js.Device.prototype.stop">module airplay-js.Device.prototype.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.stop.stop" id="apidoc.element.airplay-js.Device.prototype.stop.stop">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.Device.prototype.volume" id="apidoc.module.airplay-js.Device.prototype.volume">module airplay-js.Device.prototype.volume</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.Device.prototype.volume.volume" id="apidoc.element.airplay-js.Device.prototype.volume.volume">
+        function <span class="apidocSignatureSpan">airplay-js.Device.prototype.</span>volume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">volume = function () {
+    this.client[ api[1] ].apply( this.client, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS" id="apidoc.module.airplay-js.HLS">module airplay-js.HLS</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.HLS" id="apidoc.element.airplay-js.HLS.HLS">
+        function <span class="apidocSignatureSpan">airplay-js.</span>HLS
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HLSServer( options ) {
+    events.EventEmitter.call( this );
+    var ops = this.options = options || {};
+
+    // æ˜¯å¦å¯ç”¨æµæ¨¡å¼(å½±å“m3u8ç”Ÿæˆæœºåˆ¶)
+    // ops.streaming = !!ops.streaming;
+    // TSæ–‡ä»¶ç¼“å­˜
+    ops.cache = !!ops.cache;
+    // TSåˆ†ç‰‡æ—¶é•¿(s)
+    ops.duration = ops.duration || 20;
+    // ç¼–è§£ç&nbsp;åº“ç›®å½•
+    ops.lib = path.normalize( ops.lib || ( __dirname + '/../dep' ) ) + '/';
+    if ( !fs.existsSync( ops.lib ) ) {
+        ops.lib = '';
+    }
+    // TSåˆ†ç‰‡è¾“å‡ºç›®å½•
+    ops.out = path.normalize( ops.out || ( '/tmp' ) ) + '/';
+    if ( !fs.existsSync( ops.out ) ) {
+        fs.mkdirSync( ops.out );
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a HLS Server
+*
+* @param {Object=} options
+* @return {HLS} instance of HLS
+*/
+exports.createHLS = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">HLS</span>( options );
+};
+
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.super_" id="apidoc.element.airplay-js.HLS.super_">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype" id="apidoc.module.airplay-js.HLS.prototype">module airplay-js.HLS.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg" id="apidoc.element.airplay-js.HLS.prototype.command4FFMpeg">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFMpeg
+        <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command4FFMpeg = function ( tsIndex, tsOutput ) {
+    var opt = [
+        '-y',
+        '-i',
+        this.file,
+        '-t', this.options.duration,
+        '-ss', this.options.duration * (tsIndex - 1),
+    ];
+
+    var isH264 = this.videoInfo.streams.some(function ( s ) {
+        return s.codec_name === 'h264';
+    });
+
+    // h264 &amp;&amp; aac
+    if ( isH264 ) {
+        opt = opt.concat([
+            '-c:v', 'libx264', // libx264 || copy
+            '-c:a', 'aac', // aac || copy
+            '-strict', '-2',
+            '-vbsf', 'h264_mp4toannexb'
+        ]);
+    }
+    else {
+        opt = opt.concat([
+            '-c:v', 'linx264',
+            '-c:a', 'aac',
+            // '-g', 100,
+            // '-vcodec', 'copy',
+            // '-acodec', 'copy',
+            '-b', '500k',
+            '-ac', '2',
+            '-ar', '44100',
+            '-ab', '32k'
+        ]);
+    }
+
+    // TODO: HLS by ffmpeg
+    // opt = opt.concat([
+    //     '-f', 'hls',
+    //     '-hls_time', '10',
+    //     '-hls_list_size', '999',
+    //     'out/0.m3u8'
+    // ]);
+
+    opt.push( tsOutput );
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if ( fs.existsSync( outfile ) &amp;&amp; false) {
+    fs.createReadStream( outfile ).pipe( res );
+    return;
+}
+
+var f = spawn(
+    this.options.lib + 'ffmpeg',
+    this.<span class="apidocCodeKeywordSpan">command4FFMpeg</span>( index, outfile )
+);
+
+var output = '';
+f.stdout.on( 'data', function ( chunk ) {
+    output += chunk;
+    self.emit( 'process', { index: index, file: outfile, out: chunk } );
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe" id="apidoc.element.airplay-js.HLS.prototype.command4FFProbe">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFProbe
+        <span class="apidocSignatureSpan">( filePath )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command4FFProbe = function ( filePath ) {
+    var opt = [
+        '-v',
+        'quiet',
+        '-print_format', 'json',
+        '-show_format',
+        '-show_streams',
+        filePath
+    ];
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return; // We assume that which will return != 0 so on('close') will handle the NoFFMPEG case.
+}
+// # -------------------------------------------------- # //
+
+if(data.length &gt;0){
+    self.openThread = spawn(
+        self.options.lib + 'ffprobe',
+        self.<span class="apidocCodeKeywordSpan">command4FFProbe</span>( self.file ));
+    var output = '';
+    self.openThread.stdout.on( 'data', function ( chunk ) {
+        output += chunk;
+    });
+    self.openThread.stderr.on( 'data', function ( err ) {
+        self.emit(
+            'error',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.getURI" id="apidoc.element.airplay-js.HLS.prototype.getURI">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>getURI
+        <span class="apidocSignatureSpan">( type, index )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getURI = function ( type, index ) {
+    if ( type === 'video' ) {
+        return '/stream/0.m3u8';
+    }
+    else if ( type === 'audio' ) {
+        return '/stream/1.m3u8';
+    }
+    else if ( type === 'iframes' ) {
+        return '/iframes.m3u8';
+    }
+    else if ( type === 'segment' ) {
+        return '/stream/0/' + index + '.ts';
+    }
+    else {
+        return this.baseURI;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).createHLS();
+self.hls.on( 'start', function () {
+    console.info( '[HLS] start: %s', self.hls.<span class="apidocCodeKeywordSpan">getURI</span>() );
+});
+self.hls.on( 'stop', function () {
+    console.info( '[HLS] stop: %s', self.hls.getURI() );
+});
+self.hls.on( 'request', function ( req ) {
+    // var uri = url.parse( req.url, true );
+    console.info( '[HLS] request: %s', req.url );
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.httpHandler" id="apidoc.element.airplay-js.HLS.prototype.httpHandler">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>httpHandler
+        <span class="apidocSignatureSpan">( request, response )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">httpHandler = function ( request, response ) {
+    var ops = this.options;
+    var header = {};
+    var body = [];
+    var uri = url.parse( request.url, true );
+    var self = this
+
+    this.emit( 'request', request );
+
+    if ( uri.pathname === '/' ) {
+        console.log("attending /")
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="und",NAME="Original Audio",DEFAULT=YES,AUTOSELECT=YES' );
+        console.log(this.subtitles)
+        if(this.subtitles){
+            this.subtitles.forEach(function(each){
+                body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE
+="en",URI="http://'+self.address+':'+self.port+'/subtitles/'+each.language+'.m3u8"' )
+            })
+        }
+        //body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",DEFAULT=NO,AUTOSELECT=NO,FORCED=YES,LANGUAGE="en
+",URI="http://carlosguerrero.com/b.m3u8"' )
+
+        // stream#0
+        if(this.subtitles){
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio",SUBTITLES
+="subs"' );
+        }else{
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio"' );
+        }
+        body.push( this.getURI( 'video' ) );
+
+        // // stream#1
+        // body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="ac-3,avc1.640028",AUDIO="audio"' );
+        // body.push( '/stream/1.m3u8' );
+
+        // // frames
+        // body.push( '#EXT-X-I-FRAME-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="avc1.640028",URI="/iframes.m3u8"' );
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header[ 'Content-Length' ] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+
+        response.end();
+    }
+    else if ( uri.pathname === this.getURI( 'video' ) ) {
+        var tsDuration = ops.duration;
+        var videoDuration = parseFloat( this.videoInfo.format.duration, 10 );
+
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-VERSION:3' );
+        // body.push( '#EXT-X-PLAYLIST-TYPE:EVENT' );
+        body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+        body.push( '#EXT-X-TARGETDURATION:' + tsDuration );
+        body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+        body.push( '#EXT-X-ALLOW-CACHE:' + ( ops.cache ? 'YES' : 'NO') );
+
+        for ( var i = 1, n = this.segmentSize; i &lt; n; i++ ) {
+            body.push(
+                '#EXTINF:'
+                // æœ€åŽä¸€ä¸ªåˆ†æ®µä¸€èˆ¬ä¼šå°‘ä¸€ç‚¹ï¼Œéœ€è¦ç²¾ç¡®è®¡ç®—ä¸‹
+                + ( i &gt;= n ? ( videoDuration % tsDuration || tsDuration ) : tsDuration )
+                + ','
+            );
+            body.push( this.getURI( 'segment', i ) );
+        }
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Connection'] = 'Keep-Alive';
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header['Content-Length'] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+        response.end();
+    }
+    // else if ( uri.pathname === this.getURI( 'audio' ) ) {
+    // }
+    // else if ( uri.pathname === this.getURI( 'iframes' ) ) {
+    //     body.push( '#EXTM3U' );
+    //     body.push( '#EXT-X-VERSION:4' );
+    //     body.push( '#EXT-X-TARGETDURATION:3' );
+    //     body.push( '#EXT-X-I-FRAMES-ONLY' );
+    //     body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+    //     body.push( '#EXT-X-ALLOW-CACHE:YES' );
+    //     body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+
+    //     body.push( '/iframes/0.ts' );
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+    //     body.push( '/iframes/1.ts' );
+    //     ...
+
+    //     body.push( '#EXT-X-ENDLIST' );
+    // }
+    else if ( /^\/stream\/0\//.test( uri.pathname ) ) ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.open" id="apidoc.element.airplay-js.HLS.prototype.open">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>open
+        <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function ( fileFullPath, callback ) {
+    var self = this;
+    var media = fileFullPath
+
+    console.log("fileFullPath:")
+    console.log(fileFullPath)
+    console.log(typeof(fileFullPath))
+    if (typeof(fileFullPath) != 'string'){
+        self.subtitles = media.subtitles
+        fileFullPath = media.file
+    }
+
+    if ( this.openThread ) {
+        this.openThread.kill();
+    }
+
+    this.file = fileFullPath;
+
+    var whichCommand = /^win/.test(process.platform) ? 'where' : 'which'
+
+    self.checkFirst = spawn(whichCommand,['ffprobe'])
+    self.checkFirst.on('close', function(data){
+        console.log("x:"+data)
+        if(data!=0){
+            console.log("No FFMPEG FOUND :(")
+            self.emit("NoFFMPEG")
+            return 0;
+        }
+    })
+    self.checkFirst.stdout.on('data', function(data){
+        console.log("d:"+data)
+
+        // # -------------------------------------------------- # //
+        // TODO: find the ffmpeg path when the object is constructed instead of resolving it now.
+        // PATCH to actually find the ffmpeg executable
+        var ffmpegPath = data.toString("utf8").trim()
+        if(data.length &gt; 0 &amp;&amp; fs.existsSync(ffmpegPath)) {
+            var ffmpegPath = path.dirname(ffmpegPath) + path.sep
+            if(self.options.lib != ffmpegPath) {
+                self.options.lib = ffmpegPath
+                console.log("FFMPEG path set to " + ffmpegPath)
+            }
+        } else {
+            self.emit("NoFFMPEG")
+            return; // We assume that which will return != 0 so on('close') will handle the NoFFMPEG case.
+        }
+        // # -------------------------------------------------- # //
+
+        if(data.length &gt;0){
+            self.openThread = spawn(
+                self.options.lib + 'ffprobe',
+                self.command4FFProbe( self.file ));
+            var output = '';
+            self.openThread.stdout.on( 'data', function ( chunk ) {
+                output += chunk;
+            });
+            self.openThread.stderr.on( 'data', function ( err ) {
+                self.emit(
+                    'error',
+                    { type: 'open', err: err, file: fileFullPath }
+                );
+            });
+            self.openThread.stdout.on( 'end', function () {
+                var json;
+                try {
+                    json = JSON.parse( output );
+                } catch (e) {
+                    self.emit(
+                        'error',
+                        { type: 'open', err: e.message, file: fileFullPath }
+                    );
+                }
+                if ( json ) {
+                    self.videoInfo = json;
+                    // update store
+                    self.segmentSize = Math.ceil( parseFloat( json.format.duration, 10 ) / self.options.duration );
+                    self.emit( 'open', { file: fileFullPath, info: json } );
+                }
+                if ( callback ) {
+                    callback( json );
+                }
+                self.openThread = null;
+            });
+            return self;
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+//#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+//
+console.log(typeof(media))
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.<span class="apidocCodeKeywordSpan">open</span>( media , function ( info ) {
+    device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.status( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.segment" id="apidoc.element.airplay-js.HLS.prototype.segment">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>segment
+        <span class="apidocSignatureSpan">( index, req, res )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">segment = function ( index, req, res ) {
+    var self = this;
+    var outfile = this.options.out + index + '.ts';
+
+    // skip if exists
+    if ( fs.existsSync( outfile ) &amp;&amp; false) {
+        fs.createReadStream( outfile ).pipe( res );
+        return;
+    }
+
+    var f = spawn(
+        this.options.lib + 'ffmpeg',
+        this.command4FFMpeg( index, outfile )
+    );
+
+    var output = '';
+    f.stdout.on( 'data', function ( chunk ) {
+        output += chunk;
+        self.emit( 'process', { index: index, file: outfile, out: chunk } );
+    });
+    f.stdout.on( 'error', function ( err ) {
+        self.emit(
+            'error',
+            { type: 'segment', err: err, index: index, file: outfile }
+        );
+    });
+
+    f.stdout.on( 'end', function () {
+        self.emit( 'segment', { index: index, file: outfile, out: output } );
+        fs.createReadStream( outfile ).pipe( res );
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    //     body.push( '#EXT-X-ENDLIST' );
+    // }
+    else if ( /^\/stream\/0\//.test( uri.pathname ) ) {
+header['Content-Type'] = 'video/MP2T';
+response.writeHead( 200, header );
+
+var tsIndex = parseInt( path.basename( uri.pathname, '.ts' ), 10 );
+this.<span class="apidocCodeKeywordSpan">segment</span>( tsIndex, request, response );
+this.emit( 'stream', tsIndex, this.segmentSize );
+// fs.createReadStream( filePath ).pipe( response );
+// response.write( fs.readFileSync( filePath ) );
+// response.end();
+    } else if ( /^\/subtitles/.test(uri.pathname) ){
+
+var selected = uri.pathname.substring(11,uri.pathname.length)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles" id="apidoc.element.airplay-js.HLS.prototype.setSubtitles">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>setSubtitles
+        <span class="apidocSignatureSpan">( subtitles )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSubtitles = function ( subtitles ){
+    console.log("Setting subtitles to: "+subtitles)
+    var self = this
+    self.subtitles = subtitles
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.start" id="apidoc.element.airplay-js.HLS.prototype.start">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>start
+        <span class="apidocSignatureSpan">( port )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function ( port ) {
+    if ( !this.started ) {
+        this.started = !0;
+
+        this.baseURI = 'http://' + IP_LOCAL + ( port === 80 ? '' : ':' + port );
+
+        this.server = http.createServer( this.httpHandler.bind( this ) );
+        this.server.listen( port, IP_LOCAL );
+
+        this.emit( 'start', { host: IP_LOCAL, port: port } );
+    }
+
+    this.port = port
+    this.address = IP_LOCAL
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+## Testing
+
+```
+npm install
+npm test
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.stop" id="apidoc.element.airplay-js.HLS.prototype.stop">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    if ( this.started &amp;&amp; this.server ) {
+        this.server.close();
+        this.emit( 'stop' );
+    }
+
+    this.started = !1;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.command4FFMpeg" id="apidoc.module.airplay-js.HLS.prototype.command4FFMpeg">module airplay-js.HLS.prototype.command4FFMpeg</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFMpeg.command4FFMpeg" id="apidoc.element.airplay-js.HLS.prototype.command4FFMpeg.command4FFMpeg">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFMpeg
+        <span class="apidocSignatureSpan">( tsIndex, tsOutput )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command4FFMpeg = function ( tsIndex, tsOutput ) {
+    var opt = [
+        '-y',
+        '-i',
+        this.file,
+        '-t', this.options.duration,
+        '-ss', this.options.duration * (tsIndex - 1),
+    ];
+
+    var isH264 = this.videoInfo.streams.some(function ( s ) {
+        return s.codec_name === 'h264';
+    });
+
+    // h264 &amp;&amp; aac
+    if ( isH264 ) {
+        opt = opt.concat([
+            '-c:v', 'libx264', // libx264 || copy
+            '-c:a', 'aac', // aac || copy
+            '-strict', '-2',
+            '-vbsf', 'h264_mp4toannexb'
+        ]);
+    }
+    else {
+        opt = opt.concat([
+            '-c:v', 'linx264',
+            '-c:a', 'aac',
+            // '-g', 100,
+            // '-vcodec', 'copy',
+            // '-acodec', 'copy',
+            '-b', '500k',
+            '-ac', '2',
+            '-ar', '44100',
+            '-ab', '32k'
+        ]);
+    }
+
+    // TODO: HLS by ffmpeg
+    // opt = opt.concat([
+    //     '-f', 'hls',
+    //     '-hls_time', '10',
+    //     '-hls_list_size', '999',
+    //     'out/0.m3u8'
+    // ]);
+
+    opt.push( tsOutput );
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if ( fs.existsSync( outfile ) &amp;&amp; false) {
+    fs.createReadStream( outfile ).pipe( res );
+    return;
+}
+
+var f = spawn(
+    this.options.lib + 'ffmpeg',
+    this.<span class="apidocCodeKeywordSpan">command4FFMpeg</span>( index, outfile )
+);
+
+var output = '';
+f.stdout.on( 'data', function ( chunk ) {
+    output += chunk;
+    self.emit( 'process', { index: index, file: outfile, out: chunk } );
+});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.command4FFProbe" id="apidoc.module.airplay-js.HLS.prototype.command4FFProbe">module airplay-js.HLS.prototype.command4FFProbe</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.command4FFProbe.command4FFProbe" id="apidoc.element.airplay-js.HLS.prototype.command4FFProbe.command4FFProbe">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>command4FFProbe
+        <span class="apidocSignatureSpan">( filePath )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">command4FFProbe = function ( filePath ) {
+    var opt = [
+        '-v',
+        'quiet',
+        '-print_format', 'json',
+        '-show_format',
+        '-show_streams',
+        filePath
+    ];
+
+    return opt;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return; // We assume that which will return != 0 so on('close') will handle the NoFFMPEG case.
+}
+// # -------------------------------------------------- # //
+
+if(data.length &gt;0){
+    self.openThread = spawn(
+        self.options.lib + 'ffprobe',
+        self.<span class="apidocCodeKeywordSpan">command4FFProbe</span>( self.file ));
+    var output = '';
+    self.openThread.stdout.on( 'data', function ( chunk ) {
+        output += chunk;
+    });
+    self.openThread.stderr.on( 'data', function ( err ) {
+        self.emit(
+            'error',
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.getURI" id="apidoc.module.airplay-js.HLS.prototype.getURI">module airplay-js.HLS.prototype.getURI</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.getURI.getURI" id="apidoc.element.airplay-js.HLS.prototype.getURI.getURI">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>getURI
+        <span class="apidocSignatureSpan">( type, index )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getURI = function ( type, index ) {
+    if ( type === 'video' ) {
+        return '/stream/0.m3u8';
+    }
+    else if ( type === 'audio' ) {
+        return '/stream/1.m3u8';
+    }
+    else if ( type === 'iframes' ) {
+        return '/iframes.m3u8';
+    }
+    else if ( type === 'segment' ) {
+        return '/stream/0/' + index + '.ts';
+    }
+    else {
+        return this.baseURI;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).createHLS();
+self.hls.on( 'start', function () {
+    console.info( '[HLS] start: %s', self.hls.<span class="apidocCodeKeywordSpan">getURI</span>() );
+});
+self.hls.on( 'stop', function () {
+    console.info( '[HLS] stop: %s', self.hls.getURI() );
+});
+self.hls.on( 'request', function ( req ) {
+    // var uri = url.parse( req.url, true );
+    console.info( '[HLS] request: %s', req.url );
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.httpHandler" id="apidoc.module.airplay-js.HLS.prototype.httpHandler">module airplay-js.HLS.prototype.httpHandler</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.httpHandler.httpHandler" id="apidoc.element.airplay-js.HLS.prototype.httpHandler.httpHandler">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>httpHandler
+        <span class="apidocSignatureSpan">( request, response )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">httpHandler = function ( request, response ) {
+    var ops = this.options;
+    var header = {};
+    var body = [];
+    var uri = url.parse( request.url, true );
+    var self = this
+
+    this.emit( 'request', request );
+
+    if ( uri.pathname === '/' ) {
+        console.log("attending /")
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio",LANGUAGE="und",NAME="Original Audio",DEFAULT=YES,AUTOSELECT=YES' );
+        console.log(this.subtitles)
+        if(this.subtitles){
+            this.subtitles.forEach(function(each){
+                body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="English",DEFAULT=YES,AUTOSELECT=YES,FORCED=NO,LANGUAGE
+="en",URI="http://'+self.address+':'+self.port+'/subtitles/'+each.language+'.m3u8"' )
+            })
+        }
+        //body.push( '#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="subs",NAME="Spanish",DEFAULT=NO,AUTOSELECT=NO,FORCED=YES,LANGUAGE="en
+",URI="http://carlosguerrero.com/b.m3u8"' )
+
+        // stream#0
+        if(this.subtitles){
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio",SUBTITLES
+="subs"' );
+        }else{
+            body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="mp4a.40.2,avc1.640028",AUDIO="audio"' );
+        }
+        body.push( this.getURI( 'video' ) );
+
+        // // stream#1
+        // body.push( '#EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="ac-3,avc1.640028",AUDIO="audio"' );
+        // body.push( '/stream/1.m3u8' );
+
+        // // frames
+        // body.push( '#EXT-X-I-FRAME-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=20000000,CODECS="avc1.640028",URI="/iframes.m3u8"' );
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header[ 'Content-Length' ] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+
+        response.end();
+    }
+    else if ( uri.pathname === this.getURI( 'video' ) ) {
+        var tsDuration = ops.duration;
+        var videoDuration = parseFloat( this.videoInfo.format.duration, 10 );
+
+        body.push( '#EXTM3U' );
+        body.push( '#EXT-X-VERSION:3' );
+        // body.push( '#EXT-X-PLAYLIST-TYPE:EVENT' );
+        body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+        body.push( '#EXT-X-TARGETDURATION:' + tsDuration );
+        body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+        body.push( '#EXT-X-ALLOW-CACHE:' + ( ops.cache ? 'YES' : 'NO') );
+
+        for ( var i = 1, n = this.segmentSize; i &lt; n; i++ ) {
+            body.push(
+                '#EXTINF:'
+                // æœ€åŽä¸€ä¸ªåˆ†æ®µä¸€èˆ¬ä¼šå°‘ä¸€ç‚¹ï¼Œéœ€è¦ç²¾ç¡®è®¡ç®—ä¸‹
+                + ( i &gt;= n ? ( videoDuration % tsDuration || tsDuration ) : tsDuration )
+                + ','
+            );
+            body.push( this.getURI( 'segment', i ) );
+        }
+
+        body.push( '#EXT-X-ENDLIST' );
+        body = body.join( '\n' );
+
+        // header['Connection'] = 'Keep-Alive';
+        // header['Content-Type'] = 'application/vnd.apple.mpegurl';
+        header['Content-Length'] = body.length;
+
+        response.writeHead( 200, header );
+        response.write( body );
+        response.end();
+    }
+    // else if ( uri.pathname === this.getURI( 'audio' ) ) {
+    // }
+    // else if ( uri.pathname === this.getURI( 'iframes' ) ) {
+    //     body.push( '#EXTM3U' );
+    //     body.push( '#EXT-X-VERSION:4' );
+    //     body.push( '#EXT-X-TARGETDURATION:3' );
+    //     body.push( '#EXT-X-I-FRAMES-ONLY' );
+    //     body.push( '#EXT-X-PLAYLIST-TYPE:VOD' );
+    //     body.push( '#EXT-X-ALLOW-CACHE:YES' );
+    //     body.push( '#EXT-X-MEDIA-SEQUENCE:0' );
+
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+
+    //     body.push( '/iframes/0.ts' );
+    //     body.push( '#EXTINF:3.000000000000000,' );
+    //     body.push( '#EXT-X-BYTERANGE:2097152@564' );
+    //     body.push( '/iframes/1.ts' );
+    //     ...
+
+    //     body.push( '#EXT-X-ENDLIST' );
+    // }
+    else if ( /^\/stream\/0\//.test( uri.pathname ) ) ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.open" id="apidoc.module.airplay-js.HLS.prototype.open">module airplay-js.HLS.prototype.open</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.open.open" id="apidoc.element.airplay-js.HLS.prototype.open.open">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>open
+        <span class="apidocSignatureSpan">( fileFullPath, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">open = function ( fileFullPath, callback ) {
+    var self = this;
+    var media = fileFullPath
+
+    console.log("fileFullPath:")
+    console.log(fileFullPath)
+    console.log(typeof(fileFullPath))
+    if (typeof(fileFullPath) != 'string'){
+        self.subtitles = media.subtitles
+        fileFullPath = media.file
+    }
+
+    if ( this.openThread ) {
+        this.openThread.kill();
+    }
+
+    this.file = fileFullPath;
+
+    var whichCommand = /^win/.test(process.platform) ? 'where' : 'which'
+
+    self.checkFirst = spawn(whichCommand,['ffprobe'])
+    self.checkFirst.on('close', function(data){
+        console.log("x:"+data)
+        if(data!=0){
+            console.log("No FFMPEG FOUND :(")
+            self.emit("NoFFMPEG")
+            return 0;
+        }
+    })
+    self.checkFirst.stdout.on('data', function(data){
+        console.log("d:"+data)
+
+        // # -------------------------------------------------- # //
+        // TODO: find the ffmpeg path when the object is constructed instead of resolving it now.
+        // PATCH to actually find the ffmpeg executable
+        var ffmpegPath = data.toString("utf8").trim()
+        if(data.length &gt; 0 &amp;&amp; fs.existsSync(ffmpegPath)) {
+            var ffmpegPath = path.dirname(ffmpegPath) + path.sep
+            if(self.options.lib != ffmpegPath) {
+                self.options.lib = ffmpegPath
+                console.log("FFMPEG path set to " + ffmpegPath)
+            }
+        } else {
+            self.emit("NoFFMPEG")
+            return; // We assume that which will return != 0 so on('close') will handle the NoFFMPEG case.
+        }
+        // # -------------------------------------------------- # //
+
+        if(data.length &gt;0){
+            self.openThread = spawn(
+                self.options.lib + 'ffprobe',
+                self.command4FFProbe( self.file ));
+            var output = '';
+            self.openThread.stdout.on( 'data', function ( chunk ) {
+                output += chunk;
+            });
+            self.openThread.stderr.on( 'data', function ( err ) {
+                self.emit(
+                    'error',
+                    { type: 'open', err: err, file: fileFullPath }
+                );
+            });
+            self.openThread.stdout.on( 'end', function () {
+                var json;
+                try {
+                    json = JSON.parse( output );
+                } catch (e) {
+                    self.emit(
+                        'error',
+                        { type: 'open', err: e.message, file: fileFullPath }
+                    );
+                }
+                if ( json ) {
+                    self.videoInfo = json;
+                    // update store
+                    self.segmentSize = Math.ceil( parseFloat( json.format.duration, 10 ) / self.options.duration );
+                    self.emit( 'open', { file: fileFullPath, info: json } );
+                }
+                if ( callback ) {
+                    callback( json );
+                }
+                self.openThread = null;
+            });
+            return self;
+        }
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+//#TODO: Check if has ffmpeg and if not, go directly to simpleplay
+//
+console.log(typeof(media))
+self.hls.start( 7001 + this.id );
+
+console.log("going to play: "+media)
+self.hls.<span class="apidocCodeKeywordSpan">open</span>( media , function ( info ) {
+    device.simpleplay( self.hls.getURI(), '0.000000', function ( res ) {
+        console.info( '-&gt;&gt; ', res );
+        setTimeout(function(){
+            device.status( function ( info ) {
+                console.info( '-&gt;&gt; ', info ? info : 'no info &gt;(' );
+                if ( info ) {
+                    console.log(info)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.segment" id="apidoc.module.airplay-js.HLS.prototype.segment">module airplay-js.HLS.prototype.segment</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.segment.segment" id="apidoc.element.airplay-js.HLS.prototype.segment.segment">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>segment
+        <span class="apidocSignatureSpan">( index, req, res )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">segment = function ( index, req, res ) {
+    var self = this;
+    var outfile = this.options.out + index + '.ts';
+
+    // skip if exists
+    if ( fs.existsSync( outfile ) &amp;&amp; false) {
+        fs.createReadStream( outfile ).pipe( res );
+        return;
+    }
+
+    var f = spawn(
+        this.options.lib + 'ffmpeg',
+        this.command4FFMpeg( index, outfile )
+    );
+
+    var output = '';
+    f.stdout.on( 'data', function ( chunk ) {
+        output += chunk;
+        self.emit( 'process', { index: index, file: outfile, out: chunk } );
+    });
+    f.stdout.on( 'error', function ( err ) {
+        self.emit(
+            'error',
+            { type: 'segment', err: err, index: index, file: outfile }
+        );
+    });
+
+    f.stdout.on( 'end', function () {
+        self.emit( 'segment', { index: index, file: outfile, out: output } );
+        fs.createReadStream( outfile ).pipe( res );
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    //     body.push( '#EXT-X-ENDLIST' );
+    // }
+    else if ( /^\/stream\/0\//.test( uri.pathname ) ) {
+header['Content-Type'] = 'video/MP2T';
+response.writeHead( 200, header );
+
+var tsIndex = parseInt( path.basename( uri.pathname, '.ts' ), 10 );
+this.<span class="apidocCodeKeywordSpan">segment</span>( tsIndex, request, response );
+this.emit( 'stream', tsIndex, this.segmentSize );
+// fs.createReadStream( filePath ).pipe( response );
+// response.write( fs.readFileSync( filePath ) );
+// response.end();
+    } else if ( /^\/subtitles/.test(uri.pathname) ){
+
+var selected = uri.pathname.substring(11,uri.pathname.length)
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.setSubtitles" id="apidoc.module.airplay-js.HLS.prototype.setSubtitles">module airplay-js.HLS.prototype.setSubtitles</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.setSubtitles.setSubtitles" id="apidoc.element.airplay-js.HLS.prototype.setSubtitles.setSubtitles">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>setSubtitles
+        <span class="apidocSignatureSpan">( subtitles )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setSubtitles = function ( subtitles ){
+    console.log("Setting subtitles to: "+subtitles)
+    var self = this
+    self.subtitles = subtitles
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.start" id="apidoc.module.airplay-js.HLS.prototype.start">module airplay-js.HLS.prototype.start</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.start.start" id="apidoc.element.airplay-js.HLS.prototype.start.start">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>start
+        <span class="apidocSignatureSpan">( port )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">start = function ( port ) {
+    if ( !this.started ) {
+        this.started = !0;
+
+        this.baseURI = 'http://' + IP_LOCAL + ( port === 80 ? '' : ':' + port );
+
+        this.server = http.createServer( this.httpHandler.bind( this ) );
+        this.server.listen( port, IP_LOCAL );
+
+        this.emit( 'start', { host: IP_LOCAL, port: port } );
+    }
+
+    this.port = port
+    this.address = IP_LOCAL
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// remote video
+var browser = require( 'airplay-js' ).createBrowser();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.<span class="apidocCodeKeywordSpan">start</span>();
+```
+
+## Testing
+
+```
+npm install
+npm test
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.HLS.prototype.stop" id="apidoc.module.airplay-js.HLS.prototype.stop">module airplay-js.HLS.prototype.stop</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.HLS.prototype.stop.stop" id="apidoc.element.airplay-js.HLS.prototype.stop.stop">
+        function <span class="apidocSignatureSpan">airplay-js.HLS.prototype.</span>stop
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stop = function () {
+    if ( this.started &amp;&amp; this.server ) {
+        this.server.close();
+        this.emit( 'stop' );
+    }
+
+    this.started = !1;
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.browser" id="apidoc.module.airplay-js.browser">module airplay-js.browser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.browser.Browser" id="apidoc.element.airplay-js.browser.Browser">
+        function <span class="apidocSignatureSpan">airplay-js.browser.</span>Browser
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Browser = function ( options ) {
+    events.EventEmitter.call( this );
+    this.init( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+*/
+exports.createBrowser = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">Browser</span>( options );
+};
+
+/**
+* connect a airplay device
+*
+* @param {string} host airplay host
+* @param {number} port airplay port
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.client" id="apidoc.module.airplay-js.client">module airplay-js.client</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.client.Client" id="apidoc.element.airplay-js.client.Client">
+        function <span class="apidocSignatureSpan">airplay-js.client.</span>Client
+        <span class="apidocSignatureSpan">( options, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Client = function ( options, callback ) {
+    events.EventEmitter.call( this );
+
+    var self = this;
+
+    // { port, host, localAddress, path, allowHalfOpen }
+    this.options = options;
+    this.responseQueue = [];
+
+    this.socket = net.createConnection( options, function() {
+        self.responseQueue.push( callback );
+        self.ping();
+    });
+
+    this.socket.on( 'data', function( data ) {
+        var res = self.parseResponse( data.toString() );
+        // util.puts( util.inspect( res ) );
+
+        var fn = self.responseQueue.shift();
+        if ( fn ) {
+            fn( res );
+        }
+    });
+
+    // TODO
+    this.socket.on( 'error', function ( err ) {
+        // FIXME: è¿™é‡Œä¼šæ—¶ä¸æ—¶çš„æŠ›å‡ºå¼‚å¸¸: 'Uncaught, unspecified "error" event.'
+        try {
+            self.emit( 'error', { type: 'socket', res: err } );
+        } catch( e ) {
+            console.info( e.message );
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.connect" id="apidoc.module.airplay-js.connect">module airplay-js.connect</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.connect.connect" id="apidoc.element.airplay-js.connect.connect">
+        function <span class="apidocSignatureSpan">airplay-js.</span>connect
+        <span class="apidocSignatureSpan">( host, port, pass, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function ( host, port, pass, callback ) {
+    throw 'not yet implemented';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.createBrowser" id="apidoc.module.airplay-js.createBrowser">module airplay-js.createBrowser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.createBrowser.createBrowser" id="apidoc.element.airplay-js.createBrowser.createBrowser">
+        function <span class="apidocSignatureSpan">airplay-js.</span>createBrowser
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createBrowser = function ( options ) {
+    return new exports.Browser( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	npm install airplay-js
+
+## Usage
+
+``` javascript
+// remote video
+var browser = require( 'airplay-js' ).<span class="apidocCodeKeywordSpan">createBrowser</span>();
+browser.on( 'deviceOn', function( device ) {
+    device.play( 'http://remotehost/video.mp4', 0, function() {
+        console.info( 'video playing...' );
+    });
+});
+browser.start();
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.createHLS" id="apidoc.module.airplay-js.createHLS">module airplay-js.createHLS</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.createHLS.createHLS" id="apidoc.element.airplay-js.createHLS.createHLS">
+        function <span class="apidocSignatureSpan">airplay-js.</span>createHLS
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createHLS = function ( options ) {
+    return new exports.HLS( options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+            self.serverInfo = info;
+            self.onReady( callback );
+        });
+    }
+);
+this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+self.hls = require( '../airplay' ).<span class="apidocCodeKeywordSpan">createHLS</span>();
+self.hls.on( 'start', function () {
+    console.info( '[HLS] start: %s', self.hls.getURI() );
+});
+self.hls.on( 'stop', function () {
+    console.info( '[HLS] stop: %s', self.hls.getURI() );
+});
+self.hls.on( 'request', function ( req ) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.device" id="apidoc.module.airplay-js.device">module airplay-js.device</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.device.Device" id="apidoc.element.airplay-js.device.Device">
+        function <span class="apidocSignatureSpan">airplay-js.device.</span>Device
+        <span class="apidocSignatureSpan">( id, info, name, callback )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Device( id, info, name, callback ) {
+    var self = this;
+
+    events.EventEmitter.call( this );
+
+    this.id = id;
+    this.info = info;
+    this.name = name;
+    // this.serverInfo = null;
+    this.pingDelay = 5 * 1000; // å¿ƒè·³é—´éš”
+
+    this.client = new Client(
+        {
+            host: info[0], port: 7000
+            // ,user: 'zfkun', pass: ''
+        },
+        function () {
+            self.client.serverInfo(function( info ) {
+                self.serverInfo = info;
+                self.onReady( callback );
+            });
+        }
+    );
+    this.client.on( 'ping', function () { self.emit( 'ping' ); });
+
+    self.hls = require( '../airplay' ).createHLS();
+    self.hls.on( 'start', function () {
+        console.info( '[HLS] start: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'stop', function () {
+        console.info( '[HLS] stop: %s', self.hls.getURI() );
+    });
+    self.hls.on( 'request', function ( req ) {
+        // var uri = url.parse( req.url, true );
+        console.info( '[HLS] request: %s', req.url );
+    });
+    self.hls.on( 'process', function ( d ) {
+        console.info( '[HLS] segment process: %s, %s, %s', d.index, d.file, d.out.toString() );
+    });
+    self.hls.on( 'segment', function ( d ) {
+        console.info( '[HLS] segment created: %s, %s, %s', d.index, d.file, d.out );
+    });
+    self.hls.on( 'open', function ( d ) {
+        console.info( '[HLS] opend: %s, %s', d.file, util.inspect( d.info ) );
+    });
+    self.hls.on( 'error', function ( err ) {
+        console.info( '[HLS] segment error: ', util.inspect( err ) );
+    });
+
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.airplay-js.hls" id="apidoc.module.airplay-js.hls">module airplay-js.hls</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.airplay-js.hls.HLS" id="apidoc.element.airplay-js.hls.HLS">
+        function <span class="apidocSignatureSpan">airplay-js.hls.</span>HLS
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function HLSServer( options ) {
+    events.EventEmitter.call( this );
+    var ops = this.options = options || {};
+
+    // æ˜¯å¦å¯ç”¨æµæ¨¡å¼(å½±å“m3u8ç”Ÿæˆæœºåˆ¶)
+    // ops.streaming = !!ops.streaming;
+    // TSæ–‡ä»¶ç¼“å­˜
+    ops.cache = !!ops.cache;
+    // TSåˆ†ç‰‡æ—¶é•¿(s)
+    ops.duration = ops.duration || 20;
+    // ç¼–è§£ç&nbsp;åº“ç›®å½•
+    ops.lib = path.normalize( ops.lib || ( __dirname + '/../dep' ) ) + '/';
+    if ( !fs.existsSync( ops.lib ) ) {
+        ops.lib = '';
+    }
+    // TSåˆ†ç‰‡è¾“å‡ºç›®å½•
+    ops.out = path.normalize( ops.out || ( '/tmp' ) ) + '/';
+    if ( !fs.existsSync( ops.out ) ) {
+        fs.mkdirSync( ops.out );
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* create a HLS Server
+*
+* @param {Object=} options
+* @return {HLS} instance of HLS
+*/
+exports.createHLS = function ( options ) {
+   return new exports.<span class="apidocCodeKeywordSpan">HLS</span>( options );
+};
+
+/**
+* create a Browser
+*
+* @param {Object=} options
+* @return {Browser} instance of Browser
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
