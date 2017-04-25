@@ -1,4 +1,7 @@
-# api documentation for  airplay-js (v0.3.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-airplay-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-airplay-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-airplay-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-airplay-js)
+# npmdoc-airplay-js
+
+#### basic api documentation for  airplay-js (v0.3.0)  [![npm package](https://img.shields.io/npm/v/npmdoc-airplay-js.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-airplay-js) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-airplay-js.svg)](https://travis-ci.org/npmdoc/node-npmdoc-airplay-js)
+
 #### JS Native Apple AirPlay client library for AppleTV
 
 [![NPM](https://nodei.co/npm/airplay-js.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/airplay-js)
@@ -53,7 +56,8 @@
     "scripts": {
         "test": "node test/test"
     },
-    "version": "0.3.0"
+    "version": "0.3.0",
+    "bin": {}
 }
 ```
 
